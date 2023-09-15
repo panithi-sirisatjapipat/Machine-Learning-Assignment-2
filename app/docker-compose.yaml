@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    image: sirisat/ML-Assignment-2:v.1 
+    ports:
+      - "8000:8000"
+    build: 
+      context: .
+      dockerfile: .Dockerfile
+    volumes:
+      - ./code:/root/code
+      - ./.vscode-server:/root/.vscode-server
